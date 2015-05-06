@@ -1,0 +1,10 @@
+Простые действия со строками.
+В данной строке вставить символ c1 после каждого вхождения символа с2.
+
+Ввод
+Enter the string: 142df. dvsd
+Enter the sensor: d
+Enter the insert: 0
+
+Вывод
+Result: 142d0f. d0vsd0

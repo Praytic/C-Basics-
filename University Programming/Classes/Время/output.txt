@@ -1,0 +1,12 @@
+2> current time is 23:20:10
+3> the time after 00:39:50 will be 00:00:00
+4> current time is 23:20:10
+5> wrong parameters: 24:00:00
+5> the time between 00:00:00 and 00:00:00 is 00:00:00
+6> current time is 23:20:10
+7> wrong parameters: 24:00:00
+8> current time is 23:20:10
+16> the time after 00:00:04 will be 00:00:06
+18> wrong parameters: ABACABA
+max time: 23:20:10
+min time: 00:00:00

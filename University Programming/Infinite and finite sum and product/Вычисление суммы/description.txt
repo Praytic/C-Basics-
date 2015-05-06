@@ -1,0 +1,5 @@
+ƒл€ данного натурального n и действительного x подсчитать следующую сумму:
+S = sin x + sin sin x + sin sin sin x + Е + sin sin sin Е sin x; 
+
+¬вод					¬ывод
+Enter n and x: 3 6.1	Sum = -0.543487
