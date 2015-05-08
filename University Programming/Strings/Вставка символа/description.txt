@@ -1,3 +1,5 @@
+В данной строке вставить символ cl после каждого вхождения символа с2.
+
 Ввод
 Enter the string: 142df. dvsd
 Enter the sensor: d
