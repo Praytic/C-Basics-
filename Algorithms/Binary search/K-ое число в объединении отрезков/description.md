@@ -15,19 +15,19 @@
 **Пример(ы)**
 
 <pre>input.txt
-2 4 5 7 1 3</pre>
+2 4 5 7 1 3
 
-<pre>output.txt
+output.txt
 6</pre>
 
 <pre>input.txt
-2 4 1 10 1 10 </pre>
+2 4 1 10 1 10
 
-<pre>output.txt
+output.txt
 3</pre>
 
 <pre>input.txt
-1 1500000091 -1500000000 1500000000</pre>
+1 1500000091 -1500000000 1500000000
 
-<pre>output.txt
+output.txt
 91</pre>
