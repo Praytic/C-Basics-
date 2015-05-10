@@ -18,7 +18,7 @@
 2 4 5 7 1 3</pre>
 
 <pre>output.txt
-6</code>
+6</pre>
 
 <pre>input.txt
 2 4 1 10 1 10 </pre>
