@@ -2,53 +2,53 @@
 #define PSTACK
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include "pstack.h"
 
 using namespace std;
 
-template <class Type>
 class PStack
 {
 private:
 
     struct Element{
-        Type value;
+        string value;
         Element* next;
-        Element(Type value, Element* next) {
+        Element(string value, Element* next) {
             this->value = value;
-            this->next = nullptr;
+            this->next = next;
         }
     };
 
     Element* head;
-    int sizeOfQueue;
+    int sizeOfStack;
 
 public:
 
-    PQueue() : head(nullptr), sizeOfQueue(0){}
+    PStack() : head(nullptr), sizeOfStack(0){}
 
     bool empty(){
         return head == nullptr;
     }
 
-    void push(Type value){
-        sizeOfQueue++;
-        head = new Element(value, head);
+    void push(string u){
+        sizeOfStack++;
+        head = new Element(u, head);
     }
 
-    void get(){
-        if (empty()) return;
-        sizeOfQueue--;
-        head = head->next;
-    }
-
-    void pop() {
-        if (empty()) return;
+    string pop() {
+        if (empty()) return "";
         sizeOfStack--;
-        head = head->next;
+        Element *r = head;
+		string i = r->value;
+		head = r->next;
+		delete r;
+		return i;
     }
 
-    Type top(){
-        if (empty()) return 0;
+    string top(){
+        if (empty()) return "";
         return head->value;
     }
 
@@ -56,4 +56,3 @@ public:
 };
 
 #endif
-
