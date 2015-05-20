@@ -4,7 +4,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "pstack.h"
 
 using namespace std;
 
