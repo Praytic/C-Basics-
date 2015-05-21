@@ -5,32 +5,33 @@
 
 class Persona: public TelephoneDirectory {
 protected:
-    struct data {
-        string firstName;
-        string secondName;
-        string telephoneNumber;
-
-        data () :
-            firstName("UNKNOWN"),
-            secondName("UNKNOWN"),
-            telephoneNumber("UNKNOWN") {}
-
-        data (string D1, string D2, string D3) :
-            firstName(D1),
-            secondName(D2),
-            telephoneNumber(D3) {}
-    };
+	int ID;
+    string firstName;
+    string secondName;
+    string telephoneNumber;
 public:
-    Persona(): ID(NULL), data() {}
-    Persona(int A1, string A2, string A3, string A4): ID(A1), data(A2, A3, A4) {}
+	Persona():  
+		ID(999999),
+		firstName("UNKNOWN"),
+		secondName("UNKNOWN"),
+		telephoneNumber("UNKNOWN") {}
+	Persona(int A1, string A2, string A3, string A4):
+		ID(A1),
+		firstName(A2),
+		secondName(A3),
+		telephoneNumber(A4) {}
     ~Persona() {}
 
     void PShow() {
-        cout << "[" << index << "] "
-             << firstName << ' '
-             << secondName << ' '
-             << telephoneNumber << endl;
+		cout << "[" << ID << "] "
+			<< firstName << ' '
+			<< secondName << ' '
+			<< telephoneNumber << endl;
     }
+
+	string PSecondName() {
+		return secondName;
+	}
 
     void PCheck(string compareElement) {
         if (compareElement == secondName)

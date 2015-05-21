@@ -9,8 +9,6 @@
 using namespace std;
 
 class TelephoneDirectory {
-protected:
-    int ID;
 public:
     virtual void PShow() = 0;
     virtual void PCheck(string s) = 0;
