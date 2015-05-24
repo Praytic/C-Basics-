@@ -1,4 +1,4 @@
-#ifndef INHERITANCE_H
+﻿#ifndef INHERITANCE_H
 #define INHERITANCE_H
 
 #include <iostream>
@@ -8,6 +8,7 @@
 
 using namespace std;
 
+// Абстрактный класс
 class TelephoneDirectory {
 public:
     virtual void PShow() = 0;

@@ -1,8 +1,8 @@
-#ifndef PERSONA_H
+﻿#ifndef PERSONA_H
 #define PERSONA_H
 
 #include "inheritance.h"
-
+// Наследование от абстрактного класса
 class Persona: public TelephoneDirectory {
 protected:
 	int ID;
@@ -17,22 +17,23 @@ public:
 		telephoneNumber("UNKNOWN") {}
 	Persona(int A1, string A2, string A3, string A4):
 		ID(A1),
-		firstName(A2),
-		secondName(A3),
+		firstName(A3),
+		secondName(A2),
 		telephoneNumber(A4) {}
     ~Persona() {}
-
+	// Метод выводит данные класса в стандартный поток
     void PShow() {
 		cout << "[" << ID << "] "
 			<< firstName << ' '
 			<< secondName << ' '
 			<< telephoneNumber << endl;
     }
-
+	// Метод возвращает значение поля secondName
 	string PSecondName() {
 		return secondName;
 	}
-
+	// Метод проверяет входной аргумент и secondName
+	// и выводит данные на экран при совпадении
     void PCheck(string compareElement) {
         if (compareElement == secondName)
             PShow();

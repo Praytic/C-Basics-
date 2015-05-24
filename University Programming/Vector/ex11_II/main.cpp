@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    int n, x;
+    int n, x, c;
     cout << ">number of elements: ";
     cin >> n;
     cout << ">enter x: ";
@@ -17,7 +17,7 @@ int main()
     for (int i = 0; i < a.size(); i++) {
         cin >> a[i];
         if (a[i] % 10 == x) {
-            a.insert(a.begin() + i, c);
+            a.insert(a.begin() + i + 1, c);
             i++;
         }
     }
