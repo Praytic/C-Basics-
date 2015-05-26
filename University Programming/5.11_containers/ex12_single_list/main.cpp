@@ -1,4 +1,4 @@
-﻿#include "psinglelist.h"
+#include "psinglelist.h"
 
 int main() {
 	int num = 0;
@@ -7,7 +7,7 @@ int main() {
 	PSingleList<string> custom;
 	// Считываем все элементы в строке
 	custom.PRowInsert();
-	// Выводим результат работы программы
-	cout << custom.problemSolver(custom) << endl;
+	// Удаление всех элементов, равных topString
+	cout << custom.PRowRemove() << endl;
 	custom.PPrint();
 }
