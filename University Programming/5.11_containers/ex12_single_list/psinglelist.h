@@ -1,4 +1,4 @@
-﻿#ifndef PSINGLELIST
+#ifndef PSINGLELIST
 #define PSINGLELIST
 
 #include <iostream>
@@ -161,24 +161,47 @@ public:
 		cur->next = NULL;
 		delete cur;
 	}
+	// Функция удаляет все элементы списка, которые равны topElement
+	int PRowRemove() {
+		// Для двух исключений кол-во удаленных элементов
+		// будет равно 0, и ничего не нужно удалять
+		if(sizeOfSL == 0 || sizeOfSL == 1) return 0;
+
+		int deleted = 0;
+		Element *cur = head;
+		// Запускаем цикл, который будет проверять второй
+		// следующий элемента от текущего, и если он будет
+		// равен topElement, то мы его удалим, иначе
+		// простой перейдем к следующему
+		while (cur->next->next != nullptr) {
+			if (cur->next->value == topElement) {
+				deleted++;
+				sizeOfSL--;
+				Element *tmp = cur->next;
+				cur->next = cur->next->next;
+				delete tmp;
+			}
+			else cur = cur->next;
+		}
+		// В цикле мы не проверяем первый элемент, так как
+		// идем от него, следовательно нужно его проверить
+		// является ли он совпадающим с topElement и удалить
+		// его при необходимости
+		if (head->value == topElement) {
+			deleted++;
+			sizeOfSL--;
+			Element *tmp = head;
+			head = head->next;
+			delete tmp;
+		}
+		return deleted;
+	}
 	
 	// Метод печатает весь список с начала
 	void PPrint() {
 		for (Element *cur = head; cur != NULL; cur = cur-> next)
 			cout << cur->value << ' ';
 		cout << endl;
-	}
-
-	// Решение задачи
-	int problemSolver (PSingleList &custom) {
-		int num = 0;
-		for (int i = 1; i < custom.PSize(); i++) {
-			if (topElement == custom.PGet(i)) {
-				num++;
-				custom.PRemove(i);
-			}
-		}
-		return num;
 	}
 };
 
